@@ -4,122 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Car Wash</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles/about_style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: white; /* background */
-    }
-
-    /* --- Header & Navigation --- */
-    header {
-      background-color: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      max-height: 60px;
-      width: 70px;       /* make it square */
-      height: 50px;      /* keep same as width */
-      border-radius: 50%; /* makes it circular */
-      object-fit: cover;  /* ensures image fits inside circle */
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      padding: 5px 10px;
-      transition: color 0.3s;
-    }
-
-    nav li.active a,
-    nav a:hover {
-      color: #d4a938;
-      font-weight: bold;
-    }
-
-    /* --- Main Content --- */
-    main {
-      padding: 20px;
-    }
-
-    section {
-      background-color: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .main-photo {
-      width: 100%;
-      height: auto;
-      max-width: 600px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-
-    /* --- Story Box --- */
-    .story-box {
-      background-color: #f9f9f9;
-      padding: 15px;
-      margin: 15px auto;
-      border-radius: 6px;
-      box-shadow: 12, 56, 67, 12;
-      max-width: 800px;
-      text-align: left;
-    }
-
-    .team-members,
-    .facility-photos {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 15px;
-    }
-
-    .team-member-card {
-      text-align: center;
-      max-width: 200px;
-    }
-
-    .team-member-card img {
-      border-radius: 50%;
-      margin-bottom: 10px;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    hr {
-      border: 0;
-      height: 1px;
-      background: #ccc;
-      margin: 40px 0;
-    }
-
-    /* --- Footer --- */
-    footer {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-    }
   </style>
 </head>
 <body>
@@ -130,11 +16,12 @@
     </div>
     <nav>
       <ul>
-        <li><a href="home.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="services.php">Services</a></li>
         <li><a href="pricing.php">Pricing</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li class="active"><a href="about.php">About Us</a></li>
+        <li><a href="../page/Authentication.php">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -147,7 +34,7 @@
     <section class="about-content">
       <div class="story-section">
         <img src="https://www.goodsight.com.au/wp-content/uploads/2022/08/car-wash-installation-parkes-1d.jpg" alt="Car wash facility" class="main-photo">
-        <h2>Our Story</h2>
+        <center><h2>Our Story</h2>
 
         <div class="story-box">
           <p>We started our journey with a mission to provide eco-friendly and high-quality car wash services. Our values focus on customer satisfaction, reliability, and innovation.</p>
@@ -207,8 +94,10 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Car Wash. All Rights Reserved.</p>
+    <p>Made with ❤️ in Leyte | <a href="index.php">Back to Home</a></p>
   </footer>
 
 </body>

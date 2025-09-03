@@ -11,157 +11,9 @@
   <!-- ✅ Bootstrap CSS & Icons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/pricing_style.css"> <!-- external CSS -->
 
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #fdfdfd, #f9f9f9);
-    }
-
-    /* --- Header --- */
-    header {
-      background: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      padding: 5px 10px;
-      transition: 0.3s;
-    }
-    nav li.active a,
-    nav a:hover {
-      color: #d4a938;
-      font-weight: bold;
-    }
-
-    /* --- Section Titles --- */
-    h2.section-title {
-      margin-bottom: 40px;
-      font-size: 28px;
-      text-align: center;
-      font-weight: bold;
-      color: #333;
-    }
-
-    /* --- Pricing Cards --- */
-    .panel {
-      transition: transform 0.3s, box-shadow 0.3s;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .panel:hover {
-      transform: translateY(-10px);
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-    }
-    .panel-heading {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .panel-body p {
-      margin: 8px 0;
-    }
-    .badge-best {
-      background: #ff9800;
-      color: #fff;
-      font-size: 12px;
-      padding: 5px 8px;
-      border-radius: 5px;
-      margin-left: 10px;
-    }
-
-    /* --- Additional Services --- */
-    .service-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      width: 220px;
-      margin: 10px;
-      text-align: center;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    .service-card:hover {
-      transform: scale(1.05);
-    }
-    .service-card i {
-      font-size: 30px;
-      color: #d4a938;
-      margin-bottom: 10px;
-    }
-    .service-card .price {
-      font-size: 18px;
-      font-weight: bold;
-      color: #d4a938;
-    }
-
-    /* --- Flipcards --- */
-    .flipcard-container {
-      perspective: 1000px;
-      width: 250px;
-      margin: 20px;
-    }
-    .flipcard {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-    .flipcard-container:hover .flipcard {
-      transform: rotateY(180deg);
-    }
-    .flipcard-front, .flipcard-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 20px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-    }
-    .flipcard-front {
-      background: #fff;
-    }
-    .flipcard-back {
-      transform: rotateY(180deg);
-      background: #fef7e0;
-    }
-
-    /* --- Footer --- */
-    footer {
-      background: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-    }
   </style>
 </head>
 <body>
@@ -169,15 +21,16 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="your-logo.jpg" alt="Car Wash Logo">
+      <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.15752-9/541048493_759763299993588_5287248317119606726_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGjLdhUiHYcxF9CWG2USm2lzNlzN3dmbanM2XM3d2ZtqUbpGyjhYEUtsZYmWyATRHhXdGWmZ_8k_iT1VLi4gN5H&_nc_ohc=9fK3_MuBOS4Q7kNvwF9_P4O&_nc_oc=AdmMqVoN31IkBPmCTQlDhR05KqL6f4VgJp1UNI9BUOYumzk5-JaRgrx4f55H6DXLd6s&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&oh=03_Q7cD3AF56HPcJZg4HcGmMFRvhHZAAhjhofCyR3gcN_ySeNkQuQ&oe=68DC5DCF" alt="Car Wash Logo">
     </div>
     <nav>
       <ul>
-        <li><a href="home.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="services.php">Services</a></li>
         <li class="active"><a href="pricing.php">Pricing</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="about.php">About Us</a></li>
+        <li><a href="../page/Authentication.php">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -188,9 +41,9 @@
     <div class="row">
 
       <!-- Basic Wash -->
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <div class="panel panel-default text-center">
-          <div class="panel-heading" style="background-color:#d4a938; color:white;">
+          <div class="panel-heading" style="background:linear-gradient(to right,#d4a938,#f0c54f); color:white;">
             <h3><i class="fas fa-car"></i> Basic Wash</h3>
           </div>
           <div class="panel-body">
@@ -206,10 +59,10 @@
       </div>
 
       <!-- Premium Wash -->
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <div class="panel panel-default text-center">
-          <div class="panel-heading" style="background-color:#333; color:white;">
-            <h3><i class="fas fa-gem"></i> Premium Wash <span class="badge-best">Best Deal</span></h3>
+          <div class="panel-heading" style="background:linear-gradient(to right,#333,#555); color:white;">
+            <h3><i class="fas fa-gem"></i> Premium <span class="badge-best">Best Deal</span></h3>
           </div>
           <div class="panel-body">
             <p><strong>₱300</strong></p>
@@ -224,16 +77,34 @@
       </div>
 
       <!-- VIP Package -->
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <div class="panel panel-default text-center">
-          <div class="panel-heading" style="background-color:#444; color:white;">
-            <h3><i class="fas fa-crown"></i> VIP Package</h3>
+          <div class="panel-heading" style="background:linear-gradient(to right,#444,#666); color:white;">
+            <h3><i class="fas fa-crown"></i> VIP</h3>
           </div>
           <div class="panel-body">
             <p><strong>₱500</strong></p>
             <p>Full Detailing</p>
             <p>Interior Deep Clean</p>
             <p>Free Air Freshener</p>
+          </div>
+          <div class="panel-footer">
+            <a href="contact.php" class="btn btn-warning">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elite Package -->
+      <div class="col-sm-3">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading" style="background:linear-gradient(to right,#000,#444); color:white;">
+            <h3><i class="fas fa-star"></i> Elite Detailing</h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>₱1000</strong></p>
+            <p>Ceramic Coating</p>
+            <p>Engine Cleaning</p>
+            <p>Complete Interior Shampoo</p>
           </div>
           <div class="panel-footer">
             <a href="contact.php" class="btn btn-warning">Book Now</a>
@@ -247,11 +118,15 @@
       <h2 class="section-title">Additional Services</h2>
       <div class="service-row">
         <div class="service-card"><i class="fas fa-spray-can"></i><h3>Exterior Wash</h3><div class="price">₱200</div></div>
-        <div class="service-card"><i class="fas fa-vacuum"></i><h3>Interior Vacuum</h3><div class="price">₱300</div></div>
+        <div class="service-card"><i class="fas fa-wind"></i><h3>Interior Vacuum</h3><div class="price">₱300</div></div>
         <div class="service-card"><i class="fas fa-car-side"></i><h3>Tire Shine</h3><div class="price">₱150</div></div>
+        <div class="service-card"><i class="fas fa-brush"></i><h3>Polishing</h3><div class="price">₱400</div></div>
+        <div class="service-card"><i class="fas fa-oil-can"></i><h3>Engine Cleaning</h3><div class="price">₱600</div></div>
+        <div class="service-card"><i class="fas fa-shield-alt"></i><h3>Ceramic Coating</h3><div class="price">₱1200</div></div>
       </div>
 
-      <div class="flipcard-row text-center">
+      <!-- Flipcards -->
+      <div class="flipcard-row">
         <div class="flipcard-container">
           <div class="flipcard">
             <div class="flipcard-front">
@@ -275,6 +150,30 @@
             </div>
           </div>
         </div>
+
+        <div class="flipcard-container">
+          <div class="flipcard">
+            <div class="flipcard-front">
+              <h3>Interior Shampoo</h3>
+              <button class="btn btn-warning">₱700</button>
+            </div>
+            <div class="flipcard-back">
+              <p>Deep clean fabric seats and carpets for a fresh interior.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flipcard-container">
+          <div class="flipcard">
+            <div class="flipcard-front">
+              <h3>Underchassis Wash</h3>
+              <button class="btn btn-warning">₱350</button>
+            </div>
+            <div class="flipcard-back">
+              <p>Removes dirt and grime build-up under your car to prevent rust.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -282,6 +181,11 @@
   <!-- Footer -->
   <footer>
     <p>&copy; <?php echo date("Y"); ?> Car Wash. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
   </footer>
 
   <!-- ✅ Bootstrap JS -->

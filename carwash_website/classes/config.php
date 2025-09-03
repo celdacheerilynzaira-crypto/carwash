@@ -4,7 +4,7 @@ class Config {
     private $host = "localhost";
     private $user = "root";
     private $pass = "";
-    private $dbname = "cws_db";
+    private $dbname = "cwms_db";
     public $conn;
 
     public function __construct() {

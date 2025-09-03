@@ -7,6 +7,7 @@
 	//-----------------------//
 	//--  validate about  --//
 	//-----------------------//
+
 	try {//used try to catch unfortunate errors
 		//check for active function
 		
@@ -22,6 +23,7 @@
 	//-----------------------//
 	//--  Class Navigation --//
 	//-----------------------//
+	
 	class About{
 		//set default page info
 		private $page = '';
