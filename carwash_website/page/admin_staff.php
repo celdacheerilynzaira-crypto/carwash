@@ -92,44 +92,44 @@
             <aside class="sidebar p-3">
                 <h5 class="text-white mb-4">Navigation</h5>
                 <a href="../page/admin_dashboard.php"><i class="fa-solid fa-home me-2"></i> Dashboard</a>
-                <a href="../page/bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
+                <a href="../page/admin_bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
                 <a href="../page/admin_services.php"><i class="fa-solid fa-tags me-2"></i> Services</a>
-                <a href="../page/customers.php" class="active"><i class="fa-solid fa-users me-2"></i> Customers</a>
-                <a href="../page/staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
-                <a href="../page/reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
-                <a href="../page/gallery.php"><i class="fa-solid fa-image me-2"></i> Gallery</a>
-                <a href="../page/messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
-                <a href="../page/reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
-                <a href="../page/settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
+                <a href="../page/admin_customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
+                <a href="../page/admin_staff.php" class="active"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
+                <a href="../page/admin_reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
+                <a href="../page/admin_gallery.php"><i class="fa-solid fa-image me-2"></i> Gallery</a>
+                <a href="../page/admin_messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
+                <a href="../page/admin_reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
+                <a href="../page/admin_settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
             </aside>
 
 
 <div class="main-content p-4">
-  <h2 class="text-2xl font-bold mb-4">👥 Customers Management</h2>
+  <h2 class="text-2xl font-bold mb-4">👨‍🔧 Staff Management</h2>
 
   <!-- Search & Add -->
   <div class="d-flex justify-content-between mb-3">
     <form class="d-flex w-50">
-      <input class="form-control me-2" type="search" placeholder="🔍 Search customers..." aria-label="Search">
+      <input class="form-control me-2" type="search" placeholder="🔍 Search staff..." aria-label="Search">
       <button class="btn btn-primary">Search</button>
     </form>
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
-      ➕ Add Customer
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStaffModal">
+      ➕ Add Staff
     </button>
   </div>
 
-  <!-- Customers Table -->
+  <!-- Staff Table -->
   <div class="card shadow-sm p-3 bg-white rounded">
     <table class="table table-hover align-middle">
       <thead class="table-dark">
         <tr>
           <th>#</th>
           <th>Full Name</th>
+          <th>Role</th>
           <th>Email</th>
           <th>Phone</th>
-          <th>Car Model</th>
           <th>Status</th>
-          <th>Registered</th>
+          <th>Date Joined</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -137,28 +137,28 @@
         <!-- Example Row -->
         <tr>
           <td>1</td>
-          <td><strong>Juan Dela Cruz</strong></td>
-          <td>juan@example.com</td>
-          <td>+63 912 345 6789</td>
-          <td>Toyota Vios</td>
+          <td><strong>Mark Lopez</strong></td>
+          <td>Car Washer</td>
+          <td>mark.lopez@carwash.com</td>
+          <td>+63 921 111 2233</td>
           <td><span class="badge bg-success">Active</span></td>
-          <td>2025-08-01</td>
+          <td>2025-07-01</td>
           <td>
-            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewCustomerModal1">👁 View</button>
+            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewStaffModal1">👁 View</button>
             <button class="btn btn-sm btn-warning">✏ Edit</button>
             <button class="btn btn-sm btn-danger">🗑 Delete</button>
           </td>
         </tr>
         <tr>
           <td>2</td>
-          <td><strong>Maria Santos</strong></td>
-          <td>maria.santos@gmail.com</td>
-          <td>+63 927 654 3210</td>
-          <td>Honda Civic</td>
-          <td><span class="badge bg-secondary">Inactive</span></td>
-          <td>2025-07-15</td>
+          <td><strong>Ana Dela Cruz</strong></td>
+          <td>Cashier</td>
+          <td>ana.cruz@carwash.com</td>
+          <td>+63 935 555 7788</td>
+          <td><span class="badge bg-secondary">On Leave</span></td>
+          <td>2025-06-20</td>
           <td>
-            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewCustomerModal2">👁 View</button>
+            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewStaffModal2">👁 View</button>
             <button class="btn btn-sm btn-warning">✏ Edit</button>
             <button class="btn btn-sm btn-danger">🗑 Delete</button>
           </td>
@@ -166,13 +166,13 @@
         <tr>
           <td>3</td>
           <td><strong>Carlos Reyes</strong></td>
-          <td>carlos.reyes@yahoo.com</td>
-          <td>+63 935 888 7766</td>
-          <td>Ford Ranger</td>
-          <td><span class="badge bg-success">Active</span></td>
-          <td>2025-09-01</td>
+          <td>Manager</td>
+          <td>carlos.reyes@carwash.com</td>
+          <td>+63 988 999 1122</td>
+          <td><span class="badge bg-danger">Inactive</span></td>
+          <td>2025-05-10</td>
           <td>
-            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewCustomerModal3">👁 View</button>
+            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewStaffModal3">👁 View</button>
             <button class="btn btn-sm btn-warning">✏ Edit</button>
             <button class="btn btn-sm btn-danger">🗑 Delete</button>
           </td>
@@ -182,22 +182,23 @@
   </div>
 </div>
 
-<!-- View Customer Modal (Example for Juan Dela Cruz) -->
-<div class="modal fade" id="viewCustomerModal1" tabindex="-1">
+<!-- View Staff Modal (Example for Mark Lopez) -->
+<div class="modal fade" id="viewStaffModal1" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-info text-white">
-        <h5 class="modal-title">👤 Customer Details - Juan Dela Cruz</h5>
+        <h5 class="modal-title">👨‍🔧 Staff Details - Mark Lopez</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p><strong>Name:</strong> Juan Dela Cruz</p>
-        <p><strong>Email:</strong> juan@example.com</p>
-        <p><strong>Phone:</strong> +63 912 345 6789</p>
-        <p><strong>Car Model:</strong> Toyota Vios</p>
+        <p><strong>Name:</strong> Mark Lopez</p>
+        <p><strong>Role:</strong> Car Washer</p>
+        <p><strong>Email:</strong> mark.lopez@carwash.com</p>
+        <p><strong>Phone:</strong> +63 921 111 2233</p>
         <p><strong>Status:</strong> Active</p>
-        <p><strong>Address:</strong> Tacloban City, Leyte</p>
-        <p><strong>Notes:</strong> Prefers Premium Wash every weekend.</p>
+        <p><strong>Date Joined:</strong> 2025-07-01</p>
+        <p><strong>Assigned Branch:</strong> Tacloban City</p>
+        <p><strong>Notes:</strong> Specializes in detailing & waxing, works best in morning shifts.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -207,12 +208,12 @@
   </div>
 </div>
 
-<!-- Add Customer Modal -->
-<div class="modal fade" id="addCustomerModal" tabindex="-1">
+<!-- Add Staff Modal -->
+<div class="modal fade" id="addStaffModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
-        <h5 class="modal-title">➕ Add New Customer</h5>
+        <h5 class="modal-title">➕ Add New Staff</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
@@ -220,6 +221,15 @@
           <div class="mb-3">
             <label class="form-label">Full Name</label>
             <input type="text" class="form-control" placeholder="Enter full name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Role</label>
+            <select class="form-select">
+              <option>Car Washer</option>
+              <option>Cashier</option>
+              <option>Manager</option>
+              <option>Detailing Specialist</option>
+            </select>
           </div>
           <div class="mb-3">
             <label class="form-label">Email</label>
@@ -230,17 +240,14 @@
             <input type="text" class="form-control" placeholder="Enter phone number">
           </div>
           <div class="mb-3">
-            <label class="form-label">Car Model</label>
-            <input type="text" class="form-control" placeholder="Enter car model">
-          </div>
-          <div class="mb-3">
             <label class="form-label">Status</label>
             <select class="form-select">
               <option value="1">Active</option>
+              <option value="2">On Leave</option>
               <option value="0">Inactive</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-success">Save Customer</button>
+          <button type="submit" class="btn btn-success">Save Staff</button>
         </form>
       </div>
     </div>

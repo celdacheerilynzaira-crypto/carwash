@@ -97,7 +97,7 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Car Wash. All Rights Reserved.</p>
-    <p>Made with ❤️ in Leyte | <a href="index.php">Back to Home</a></p>
+    <p>Made with ❤️ in Leyte | <a href="../page/Home.php">Back to Home</a></p>
   </footer>
 
 </body>

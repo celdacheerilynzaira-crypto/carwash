@@ -51,15 +51,15 @@
   <aside class="sidebar p-3">
     <h5 class="text-white mb-4">Navigation</h5>
     <a href="../page/admin_dashboard.php"><i class="fa-solid fa-home me-2"></i> Dashboard</a>
-    <a href="../page/bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
+    <a href="../page/admin_bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
     <a href="../page/admin_services.php"><i class="fa-solid fa-tags me-2"></i> Services</a>
-    <a href="../page/customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
-    <a href="../page/staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
-    <a href="../page/reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
-    <a href="../page/gallery.php" class="active"><i class="fa-solid fa-image me-2"></i> Gallery</a>
-    <a href="../page/messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
-    <a href="../page/reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
-    <a href="../page/settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
+    <a href="../page/admin_customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
+    <a href="../page/admin_staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
+    <a href="../page/admin_reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
+    <a href="../page/admin_gallery.php" class="active"><i class="fa-solid fa-image me-2"></i> Gallery</a>
+    <a href="../page/admin_messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
+    <a href="../page/admin_reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
+    <a href="../page/admin_settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
   </aside>
 
   <!-- Main Content -->
@@ -168,19 +168,18 @@
       <!-- Video 3 -->
       <div class="col-md-4 col-sm-6">
         <div class="card shadow-sm">
-          <div class="ratio ratio-16x9" data-bs-toggle="modal" data-bs-target="#mediaModal9">
-            <iframe src="https://www.facebook.com/reel/" title="Car Wash Video" allowfullscreen></iframe>
+          <div class="ratio ratio-16x9" data-bs-toggle="modal" data-bs-target="#mediaModal7">
+            <iframe src="https://www.youtube.com/embed/abc123xyz" title="Car Wash Video" allowfullscreen></iframe>
           </div>
           <div class="card-body text-center">
-            <p class="card-text">Car Polishing</p>
+            <p class="card-text">Detailing Tutorial</p>
             <button class="btn btn-sm btn-danger">🗑 Delete</button>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
+
+      
 <!-- Upload Modal -->
 <div class="modal fade" id="uploadModal" tabindex="-1">
   <div class="modal-dialog">

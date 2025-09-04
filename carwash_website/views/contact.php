@@ -54,11 +54,24 @@
     <section class="contact-section">
       <!-- Info Panel -->
       <div class="contact-info-panel">
-        <h2>Get in Touch</h2>
-        <p><i class="fas fa-map-marker-alt"></i> 6501 Carwash Street, Palo Leyte, Philippines</p>
-        <p><i class="fas fa-phone"></i> +63 909 652 8736</p>
-        <p><i class="fas fa-envelope"></i> info@carwash.com</p>
-        <p><i class="fas fa-clock"></i> Mon - Sun: 8AM - 8PM</p>
+      <h2>Get in Touch</h2>
+            <p><i class="fas fa-map-marker-alt"></i>6501 Carwash Street, Palo Leyte, Philippines</p>
+            <p><i class="fas fa-phone"></i>+63 909 652 8736</p>
+            <p><i class="fas fa-envelope"></i>info@carwash.com</p>
+            <p><i class="fas fa-clock"></i>Mon - Sun: 8AM - 8PM</p>
+            <hr>
+            <h2>Contact Us (via)</h2>
+            <p><i class="fas fa-envelope"></i>vannauries07@gmail.com</p>
+            <p><i class="fas fa-phone"></i>+63 909 652 8736</p>
+            <p><i class="fab fa-facebook-f"></i> Nibel Ungen Lid</p>
+            <p><i class="fab fa-twitter"></i>nana85643</p>
+            <p><i class="fas fa-clock"></i>Mon - Sun: 8AM - 8PM</p>
+            <p>or</p>
+            <p><i class="fas fa-envelope"></i>celda46@gmail.com</p>
+            <p><i class="fas fa-phone"></i>+63 976 675 9845</p>
+            <p><i class="fab fa-facebook-f"></i> Beyen Bargola </p>
+            <p><i class="fab fa-twitter"></i>yen73546w273</p>
+            <p><i class="fas fa-clock"></i>Mon - Sun: 8AM - 8PM</p>
       </div>
 
       <!-- Contact Form -->

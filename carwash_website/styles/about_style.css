@@ -200,3 +200,7 @@ body {
   footer a:hover {
     text-decoration: underline;
   }
+
+  h2 {
+    text-align: center;
+  }

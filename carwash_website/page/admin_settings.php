@@ -92,175 +92,118 @@
             <aside class="sidebar p-3">
                 <h5 class="text-white mb-4">Navigation</h5>
                 <a href="../page/admin_dashboard.php"><i class="fa-solid fa-home me-2"></i> Dashboard</a>
-                <a href="../page/bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
+                <a href="../page/admin_bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
                 <a href="../page/admin_services.php"><i class="fa-solid fa-tags me-2"></i> Services</a>
-                <a href="../page/customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
-                <a href="../page/staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
-                <a href="../page/reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
-                <a href="../page/gallery.php"><i class="fa-solid fa-image me-2"></i> Gallery</a>
-                <a href="../page/messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
-                <a href="../page/reports.php" class="active"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
-                <a href="../page/settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
+                <a href="../page/admin_customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
+                <a href="../page/admin_staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
+                <a href="../page/admin_reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
+                <a href="../page/admin_gallery.php"><i class="fa-solid fa-image me-2"></i> Gallery</a>
+                <a href="../page/admin_messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
+                <a href="../page/admin_reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
+                <a href="../page/admin_settings.php" class="active"><i class="fa-solid fa-cog me-2"></i> Settings</a>
             </aside>
 <div class="main-content p-4">
-  <h2 class="text-2xl font-bold mb-4">📊 Reports & Analytics</h2>
+  <h2 class="text-2xl font-bold mb-4">⚙️ Settings</h2>
 
-  <!-- Filter Section -->
-  <div class="card shadow-sm p-3 mb-4">
-    <form class="row g-3 align-items-end">
-      <div class="col-md-4">
-        <label class="form-label">Start Date</label>
-        <input type="date" class="form-control">
-      </div>
-      <div class="col-md-4">
-        <label class="form-label">End Date</label>
-        <input type="date" class="form-control">
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-primary w-100">📅 Generate Report</button>
-      </div>
-    </form>
-  </div>
-
-  <!-- Summary Cards -->
-  <div class="row g-3 mb-4">
-    <div class="col-md-3">
-      <div class="card text-white bg-primary shadow-sm">
-        <div class="card-body">
-          <h5>Total Bookings</h5>
-          <h2>152</h2>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card text-white bg-success shadow-sm">
-        <div class="card-body">
-          <h5>Completed Services</h5>
-          <h2>138</h2>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card text-white bg-warning shadow-sm">
-        <div class="card-body">
-          <h5>Pending Bookings</h5>
-          <h2>14</h2>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card text-white bg-danger shadow-sm">
-        <div class="card-body">
-          <h5>Total Revenue</h5>
-          <h2>₱245,000</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Charts Section -->
-  <div class="row g-4 mb-4">
+  <div class="row g-4">
+    <!-- Profile Settings -->
     <div class="col-md-6">
       <div class="card shadow-sm p-3">
-        <h5 class="mb-3">📈 Monthly Revenue</h5>
-        <canvas id="revenueChart" height="150"></canvas>
+        <h5 class="mb-3">👤 Profile Settings</h5>
+        <form>
+          <div class="mb-3 text-center">
+            <img src="uploads/admin.jpg" alt="Profile Picture" class="rounded-circle mb-2" width="100" height="100">
+            <input type="file" class="form-control mt-2">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" value="admin123">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" value="admin@carwash.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Change Password</label>
+            <input type="password" class="form-control" placeholder="Enter new password">
+          </div>
+          <button type="submit" class="btn btn-primary">💾 Save Changes</button>
+        </form>
       </div>
     </div>
+
+    <!-- Business Info -->
     <div class="col-md-6">
       <div class="card shadow-sm p-3">
-        <h5 class="mb-3">🚘 Service Popularity</h5>
-        <canvas id="serviceChart" height="150"></canvas>
+        <h5 class="mb-3">🏢 Business Info</h5>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Business Name</label>
+            <input type="text" class="form-control" value="Sparkle Carwash Center">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" value="123 Main Street, Manila">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Contact Number</label>
+            <input type="text" class="form-control" value="+63 912 345 6789">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Opening Hours</label>
+            <input type="text" class="form-control" value="8:00 AM - 8:00 PM">
+          </div>
+          <button type="submit" class="btn btn-success">✅ Update Info</button>
+        </form>
       </div>
     </div>
   </div>
 
-  <!-- Table Reports -->
-  <div class="card shadow-sm p-3 mb-4">
-    <h5 class="mb-3">📑 Detailed Report</h5>
-    <table class="table table-bordered table-striped align-middle">
-      <thead class="table-dark">
-        <tr>
-          <th>#</th>
-          <th>Booking ID</th>
-          <th>Customer</th>
-          <th>Service</th>
-          <th>Status</th>
-          <th>Date</th>
-          <th>Revenue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>#BK20250901</td>
-          <td>Ana Reyes</td>
-          <td>Premium Wash</td>
-          <td><span class="badge bg-success">Completed</span></td>
-          <td>2025-09-01</td>
-          <td>₱1,500</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>#BK20250830</td>
-          <td>Mark Villanueva</td>
-          <td>Interior Cleaning</td>
-          <td><span class="badge bg-warning">Pending</span></td>
-          <td>2025-08-30</td>
-          <td>₱1,000</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>#BK20250828</td>
-          <td>Jenny Cruz</td>
-          <td>Full Detailing</td>
-          <td><span class="badge bg-success">Completed</span></td>
-          <td>2025-08-28</td>
-          <td>₱3,000</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="row g-4 mt-2">
+    <!-- Appearance -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <h5 class="mb-3">🎨 Appearance</h5>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Upload Logo</label>
+            <input type="file" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Theme</label>
+            <select class="form-select">
+              <option selected>Light Mode</option>
+              <option>Dark Mode</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-warning">🎨 Apply Theme</button>
+        </form>
+      </div>
+    </div>
 
-    <div class="mt-3 d-flex justify-content-end gap-2">
-      <button class="btn btn-danger">⬇ Export PDF</button>
-      <button class="btn btn-success">⬇ Export Excel</button>
+    <!-- Notifications -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <h5 class="mb-3">🔔 Notifications</h5>
+        <form>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label">Enable Email Notifications</label>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">Enable SMS Alerts</label>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label">Booking Reminders</label>
+          </div>
+          <button type="submit" class="btn btn-secondary">💾 Save Preferences</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- Charts Script -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  // Revenue Chart
-  const ctx1 = document.getElementById('revenueChart');
-  new Chart(ctx1, {
-    type: 'line',
-    data: {
-      labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'],
-      datasets: [{
-        label: 'Revenue (₱)',
-        data: [20000, 25000, 30000, 28000, 32000, 35000, 40000, 37000, 42000],
-        borderWidth: 2,
-        borderColor: 'blue',
-        backgroundColor: 'rgba(0,0,255,0.2)',
-        fill: true,
-      }]
-    }
-  });
-
-  // Service Popularity
-  const ctx2 = document.getElementById('serviceChart');
-  new Chart(ctx2, {
-    type: 'doughnut',
-    data: {
-      labels: ['Premium Wash', 'Interior Cleaning', 'Full Detailing', 'Waxing'],
-      datasets: [{
-        label: 'Service Count',
-        data: [45, 30, 20, 15],
-        backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545']
-      }]
-    }
-  });
-</script>
 </div> <!-- end of card-custom -->
 
 <!-- Bootstrap JS -->

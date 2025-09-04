@@ -76,6 +76,17 @@ class ContactPage {
             <p><i class="fas fa-phone"></i> +63 909 652 8736</p>
             <p><i class="fas fa-envelope"></i> info@carwash.com</p>
             <p><i class="fas fa-clock"></i> Mon - Sun: 8AM - 8PM</p>
+            <hr>
+            <h2>Contact Us (via)</h2>
+            <p><i class="fas fa-envelope"></i> email:</p>
+            <p><i class="fas fa-phone"></i> +63 909 652 8736</p>
+            <p><i class="fas fa-envelope"></i> vannauries07@gmail.com</p>
+            <p><i class="fas fa-clock"></i> Mon - Sun: 8AM - 8PM</p>
+            <p>or</p>
+            <p><i class="fas fa-envelope"></i> email:</p>
+            <p><i class="fas fa-phone"></i> +63 876 675 9845</p>
+            <p><i class="fas fa-envelope"></i> celda46@gmail.com</p>
+            <p><i class="fas fa-clock"></i> Mon - Sun: 8AM - 8PM</p>
         </div>
         HTML;
     }

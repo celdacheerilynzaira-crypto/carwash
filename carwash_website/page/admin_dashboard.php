@@ -1,4 +1,59 @@
 <?php
+session_start(); // ✅ Always start session at the very top
+
+// ================== Database Class ==================
+class Database {
+    private $host = "localhost";
+    private $user = "root";
+    private $pass = "";
+    private $dbname = "cwms_db";
+    public $conn;
+
+    public function __construct() {
+        $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
+        if ($this->conn->connect_error) {
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+    }
+}
+
+// ================== Inquiry Manager Class ==================
+class Inquiry {
+    private $conn;
+
+    public function __construct($dbConn) {
+        $this->conn = $dbConn;
+    }
+
+    public function getAll() {
+        $sql = "SELECT * FROM contact_messages_tb ORDER BY id DESC";
+        $result = $this->conn->query($sql);
+        return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
+    }
+
+    public function delete($id) {
+        $stmt = $this->conn->prepare("DELETE FROM contact_messages_tb WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        return $stmt->execute();
+    }
+}
+
+// ================== Initialize Classes ==================
+$db = new Database();
+$inquiry = new Inquiry($db->conn);
+
+// ✅ Handle Deletion
+if (isset($_GET['delete_id'])) {
+    $inquiry->delete((int) $_GET['delete_id']);
+    header("Location: ../page/admin_dashboard.php?deleted=1");
+    exit();
+}
+
+// ✅ Fetch All Inquiries
+$inquiries = $inquiry->getAll();
+?>
+
+<?php
 class DashboardPage {
     public function render() {
         ?>
@@ -93,15 +148,15 @@ class DashboardPage {
             <aside class="sidebar p-3">
                 <h5 class="text-white mb-4">Navigation</h5>
                 <a href="../page/admin_dashboard.php" class="active"><i class="fa-solid fa-home me-2"></i> Dashboard</a>
-                <a href="../page/bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
+                <a href="../page/admin_bookings.php"><i class="fa-solid fa-calendar-check me-2"></i> Bookings</a>
                 <a href="../page/admin_services.php"><i class="fa-solid fa-tags me-2"></i> Services</a>
-                <a href="../page/customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
-                <a href="../page/staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
-                <a href="../page/reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
-                <a href="../page/gallery.php"><i class="fa-solid fa-image me-2"></i> Gallery</a>
-                <a href="../page/messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
-                <a href="../page/reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
-                <a href="../page/settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
+                <a href="../page/admin_customers.php"><i class="fa-solid fa-users me-2"></i> Customers</a>
+                <a href="../page/admin_staff.php"><i class="fa-solid fa-user-tie me-2"></i> Staff</a>
+                <a href="../page/admin_reviews.php"><i class="fa-solid fa-star me-2"></i> Reviews</a>
+                <a href="../page/admin_gallery.php"><i class="fa-solid fa-image me-2"></i> Gallery</a>
+                <a href="../page/admin_messages.php"><i class="fa-solid fa-envelope me-2"></i> Messages</a>
+                <a href="../page/admin_reports.php"><i class="fa-solid fa-chart-bar me-2"></i> Reports</a>
+                <a href="../page/admin_settings.php"><i class="fa-solid fa-cog me-2"></i> Settings</a>
             </aside>
 
             <!-- Main Content -->

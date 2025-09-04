@@ -47,7 +47,7 @@ class Page {
           </main>
           <footer>
             <p>&copy; 2025 Car Wash. All Rights Reserved.</p>
-            <p>Made with ❤️ in Leyte | <a href="home.php">Back to Home</a></p>
+            <p>Made with ❤️ in Leyte | <a href="../page/Home.php">Back to Home</a></p>
           </footer>
         </body>
         </html>';
@@ -87,10 +87,13 @@ $page = new Page("About Us - Car Wash");
 // Add Story Section
 $storyContent = '
   <img src="https://www.goodsight.com.au/wp-content/uploads/2022/08/car-wash-installation-parkes-1d.jpg" alt="Car wash facility" class="main-photo">
-  <div class="story-box"><p>We started our journey with a mission to provide eco-friendly and high-quality car wash services.</p></div>
-  <div class="story-box"><p>Our philosophy is simple: if we wouldn’t be proud to drive it, it’s not done yet...</p></div>
-  <div class="story-box"><p>Our journey began with a simple idea: every car deserves care, and every customer deserves respect...</p></div>
-';
+  <div class="story-box"><p>We started our journey with a mission to provide eco-friendly and high-quality car wash services. Our values focus on customer satisfaction, reliability, and innovation.</p></div>
+  <div class="story-box"><p>Our philosophy is simple: if we wouldn’t be proud to drive it, it’s not done yet. Each car is treated with attention to detail, from the wheels to the windshield. Our team is trained not only in the latest cleaning techniques but also in customer service, ensuring every visit is worth your time.</p></div>
+  <div class="story-box"><p>Our journey began with a simple idea: every car deserves care, and every customer deserves respect. From our very first wash, we committed to providing a service that goes beyond cleaning we aim to create a positive experience. Over the years, we’ve built strong relationships with our customers by listening to their needs, maintaining consistent quality, and always delivering with a smile.</p></div>
+  <div class="story-box"><p>At the heart of our car wash is a commitment to the environment. We introduced water-saving technologies and eco-friendly cleaning products that minimize waste without compromising results. Every wash you choose with us helps conserve water and reduce harmful chemical use, making your clean car part of a cleaner future.</p></div>
+  <div class="story-box"><p>What started as a small neighborhood car wash has grown into a trusted brand in the community. Our success is built on the support of our loyal customers and the dedication of our hardworking team. We continue to innovate and expand our services, but we never lose sight of our roots being a friendly, reliable, and affordable car wash that feels like family.</p></div>
+  <div class="story-box"><p>We’re not just washing cars we’re building a brand that represents quality, trust, and sustainability. As we look ahead, we aim to introduce more advanced technologies, expand our services, and continue leading the way in eco-friendly car care. Our vision is to set a new standard for car wash services in the industry.</p></div> 
+  ';
 $page->addSection(new Section("Our Story", $storyContent));
 
 // Add Team Section
@@ -117,8 +120,15 @@ $facilityContent = '
     <img src="https://rightlook.com/wp-content/uploads/2022/07/rightlook_supplies_equipment_callout_hero.png" alt="Cleaning equipment">
   </div>
   <p>Our facility is equipped with the latest technology to ensure your vehicle gets the best care possible.</p>
+  <p>From advanced cleaning systems to professional-grade tools, our facility is designed to deliver a spotless finish every time.</p>
+  <p>Our state-of-the-art facility combines modern equipment with eco-friendly practices, giving your car the care it deserves.</p>
 ';
 $page->addSection(new Section("Our Facility", $facilityContent));
 
 // Render Page
-$page->render();
+$page->render();     
+?>
+
+<?php
+
+?>
