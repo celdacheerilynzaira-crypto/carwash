@@ -3,16 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/home_style.css"> <!-- external CSS -->
   <title>Home - Car Wash</title>
 
   <!-- ✅ Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-  <!-- ✅ Font Awesome for icons -->
+  <!-- ✅ Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(110deg, black, white);
+    }
+
+    header {
+      background-color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+
+    nav li.active a,
+    nav a:hover {
+      color: #d4a938;
+      font-weight: bold;
+    }
+
+    .info-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .info-section img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #eee;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #d4a938;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -21,61 +110,28 @@
   <header>
     <div class="logo">
       <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.15752-9/541048493_759763299993588_5287248317119606726_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGjLdhUiHYcxF9CWG2USm2lzNlzN3dmbanM2XM3d2ZtqUbpGyjhYEUtsZYmWyATRHhXdGWmZ_8k_iT1VLi4gN5H&_nc_ohc=9fK3_MuBOS4Q7kNvwF9_P4O&_nc_oc=AdmMqVoN31IkBPmCTQlDhR05KqL6f4VgJp1UNI9BUOYumzk5-JaRgrx4f55H6DXLd6s&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&oh=03_Q7cD3AF56HPcJZg4HcGmMFRvhHZAAhjhofCyR3gcN_ySeNkQuQ&oe=68DC5DCF" alt="Car Wash Logo">
+      <p><b>CarWash Services</b></p>
     </div>
     <nav>
       <ul>
-        <li class="active"><a href="index.php">Home</a></li>
-        <li><a href="services.php">Services</a></li>
-        <li><a href="pricing.php">Pricing</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="about.php">About Us</a></li>
+        <li class="active"><a href="Home.php">Home</a></li>
+        <li><a href="Services.php">Services</a></li>
+        <li><a href="Pricing.php">Pricing</a></li>
+        <li><a href="Contact.php">Contact</a></li>
+        <li><a href="About.php">About Us</a></li>
+        <li><a href="../page/Authentication.php">Login</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Carousel -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!--
+  <div class="video-container">
+  <video controls autoplay muted loop>
+    <source src="../video/cwms.mp4" type="video/mp4">
+  </video>
+</div>
 
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="https://www.legendautoservices.com/wp-content/uploads/2023/11/Car-wash-al-quoz-best.jpeg" alt="Carwash Facility">
-        <div class="carousel-caption">
-          <h3 style="font-size:40px">Carwash Facility</h3>
-          <p style="color:white; font-size:20px">Quality Service Guaranteed</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="https://s25180.pcdn.co/wp-content/uploads/2017/08/DSC_0402.jpg" alt="Team">
-        <div class="carousel-caption">
-          <h3>Professional Team</h3>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="https://cdn.hibuwebsites.com/1c7212e82bd542d0ba34bf77a0880234/dms3rep/multi/regency-car-wash-content-car-wash-pricing-01.jpg" alt="Pricing">
-        <div class="carousel-caption">
-          <h3>Affordable Pricing</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </div>
+  -->
 
   <!-- Info Section -->
   <div class="container info-section">
@@ -107,22 +163,22 @@
     </p>
     <div class="row" style="margin-top:30px;">
       <div class="col-sm-3">
-        <i class="fas fa-users"></i>
+        <i class="fas fa-users fa-2x"></i>
         <h4>Experienced Team</h4>
         <p>Our professional crew knows cars inside out.</p>
       </div>
       <div class="col-sm-3">
-        <i class="fas fa-leaf"></i>
+        <i class="fas fa-leaf fa-2x"></i>
         <h4>Premium Products</h4>
         <p>We use only high-quality, eco-friendly cleaning solutions.</p>
       </div>
       <div class="col-sm-3">
-        <i class="fas fa-tags"></i>
+        <i class="fas fa-tags fa-2x"></i>
         <h4>Affordable Pricing</h4>
         <p>Get a sparkling clean car without breaking the bank.</p>
       </div>
       <div class="col-sm-3">
-        <i class="fas fa-star"></i>
+        <i class="fas fa-star fa-2x"></i>
         <h4>Customer Satisfaction</h4>
         <p>Your happiness is our #1 priority, guaranteed!</p>
       </div>
@@ -158,7 +214,12 @@
   <div class="info-section" style="background:#d4a938; color:white; padding:50px 20px; margin-top:50px;">
     <h2>Ready to Give Your Car a Shine?</h2>
     <p>Visit us today or book an appointment online to experience the best car wash service.</p>
-    <a href="contact.php" class="btn btn-dark btn-lg" style="background:#222; border:none; margin-top:15px;">
+    <script>
+      $(document).on("click", "#BookBtn", function () {
+        alert("Are You Sure, You Really Want To Book Now!..");
+      });
+    </script>
+    <a href="contact.php" id="BookBtn" class="btn btn-dark btn-lg" style="background:#222; border:none; margin-top:15px;">
       Book Now
     </a>
   </div>
@@ -169,8 +230,5 @@
     <p>Made with ❤️ in Leyte | <a href="about.php">Go to About Us</a></p>
   </footer>
 
-  <!-- ✅ Bootstrap JS -->
+  <!-- ✅ Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</body>
-</html>
